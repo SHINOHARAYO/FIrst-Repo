@@ -22,8 +22,9 @@ OG Hello, World!
 ## 简单例子: 使用Python求解斐波那契数列
 
 使用矩阵法求解
-
-$$ \begin{bmatrix}Fib(n+1) \\ Fib(n) \end{bmatrix} = \begin{bmatrix}1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} Fib(n) \\ Fib(n-1) \end{bmatrix} $$
+```math 
+\begin{bmatrix}Fib(n+1) \\ Fib(n) \end{bmatrix} = \begin{bmatrix}1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} Fib(n) \\ Fib(n-1) \end{bmatrix} 
+``` 
 
 代码如下:
 
@@ -57,3 +58,6 @@ $$ \begin{bmatrix}Fib(n+1) \\ Fib(n) \end{bmatrix} = \begin{bmatrix}1 & 1 \\ 1 &
         return -1
 
 
+```math
+\begin{bmatrix}X\\Y\end{bmatrix}
+```
