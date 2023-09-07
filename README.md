@@ -23,21 +23,7 @@ OG Hello, World!
 
 使用矩阵法求解
 
-$$
-\begin{bmatrix}
-Fib(n+1) \\
-Fib(n)
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 & 1 \\
-1 & 0
-\end{bmatrix}
-\begin{bmatrix}
-Fib(n) \\
-Fib(n-1)
-\end{bmatrix}
-$$
+$$ \begin{bmatrix}Fib(n+1) \\ Fib(n) \end{bmatrix} = \begin{bmatrix}1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} Fib(n) \\ Fib(n-1) \end{bmatrix} $$
 
 代码如下:
 
