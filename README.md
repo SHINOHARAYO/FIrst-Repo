@@ -57,7 +57,3 @@ OG Hello, World!
         # 默认返回值
         return -1
 
-
-```math
-\begin{bmatrix}X\\Y\end{bmatrix}
-```
