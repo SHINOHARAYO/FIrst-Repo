@@ -127,9 +127,9 @@ class MySpotify:
             return
         elif self.Err_Code == 1:
             print("Client Authentication Fail")
-            return
+            sys.exit(1)
         elif self.Err_Code == 10:
             print ("No Search Result Match")
-            return
+            sys.exit(10)
         
    
