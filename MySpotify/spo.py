@@ -78,19 +78,33 @@ class MySpotify:
             print("TODO")
             pass
     
-    def get_artist(self, artist_name):
+    def get_artist_id(self, artist_name):
         query = f"https://api.spotify.com/v1/search?q={artist_name}&type=artist&limit=1"
 
         search_result = get(query, headers=self.access_token)
         json_result = json.loads(search_result.content)["artists"]["items"]
 
-        # parse
+        # if no result
         if len(json_result) == 0:
             self.Err_Code = 10
             self.err_handler()
             return None 
+
+        return json_result[0]["id"]
+    
+    def get_tracks_by_artist(self, artist_name):
+        artist_id = self.get_artist_id(artist_name)
+        query = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=US"
+        search_result = get(query, headers=self.access_token)
+        json_result = json.loads(search_result.content)["tracks"]
         
-        return json_result[0]
+        # if no result
+        if len(json_result) == 0:
+            self.Err_Code = 10
+            self.err_handler()
+            return None 
+
+        return json_result
     
 
 
