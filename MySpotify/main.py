@@ -10,4 +10,5 @@ id = os.getenv("SPOTIPY_CLIENT_ID")
 print(id)
 
 sp = MySpotify(0, a_scope)
-print(sp.token)
+print("Artist: " + sp.get_artist("A$AP")["name"] + "\n"
+      "ID: " + sp.get_artist("A$AP")["id"] + "\n")
