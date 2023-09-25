@@ -71,6 +71,7 @@ class MySpotify:
                 self.sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
             except SpotifyOauthError as e:
                 self.Err_Code = 1
+                self.err_handler()
         
         elif type == 1:
             # user authentication
